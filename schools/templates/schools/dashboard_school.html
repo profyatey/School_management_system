@@ -1,0 +1,9 @@
+{% extends "schools/base.html" %}
+{% block content %}
+<h2>{{ school.name }} Dashboard</h2>
+<ul>
+    {% for student in students %}
+        <li>{{ student.name }} ({{ student.age }})</li>
+    {% endfor %}
+</ul>
+{% endblock %}

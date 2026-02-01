@@ -1,0 +1,9 @@
+{% extends "schools/base.html" %}
+{% block content %}
+<h2>Admin Dashboard</h2>
+<ul>
+    {% for school in schools %}
+        <li>{{ school.name }} - <a href="{% url 'school_dashboard' school.id %}">View</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

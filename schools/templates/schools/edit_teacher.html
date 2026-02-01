@@ -1,0 +1,13 @@
+{% extends "schools/base.html" %}
+{% block title %}Edit Teacher{% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">✏️ Edit Teacher: {{ teacher.name }}</h2>
+    <form method="post" class="shadow p-4 bg-light rounded">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-warning">Update Teacher</button>
+        <a href="{% url 'teachers_list' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}
